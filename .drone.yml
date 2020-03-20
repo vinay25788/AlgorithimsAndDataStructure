@@ -1,8 +1,10 @@
-pipeline:
-  kind: pipeline
+---
+kind: pipeline
+type: docker
+name: default
 
-  steps:
-  - name: build
-    image: java:openjdk-8
-    commands:
-      - ./gradlew clean build
+steps:
+- name: build
+  image: java:openjdk-8
+  commands:
+    - ./gradlew clean build
