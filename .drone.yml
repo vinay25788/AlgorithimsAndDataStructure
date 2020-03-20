@@ -12,8 +12,10 @@ steps:
 - name: docker
   image: plugins/docker
   settings:
-    username: vinay25788
-    password: Vinay@25788
+    username:
+      from_secret: docker_username
+      password:
+        from_secret: docker_password
     repo: vinay25788/alogrithims-datastructure
     tags: latest
     dockerfile: Dockerfile
