@@ -9,3 +9,11 @@ steps:
   commands:
     - chmod 777 gradlew
     - ./gradlew clean build
+-name: docker
+  image: plugins/docker
+  settings:
+    username: vinay25788
+    password: Vinay@25788
+    repo: vinay25788/alogrithims-datastructure
+    tags: latest
+    dockerfile: Dockerfile
