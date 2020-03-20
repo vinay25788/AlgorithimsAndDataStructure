@@ -7,4 +7,5 @@ steps:
 - name: build
   image: java:openjdk-8
   commands:
+    - chmod 777 gradlew
     - ./gradlew clean build
