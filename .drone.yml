@@ -5,5 +5,5 @@ pipeline:
   build:
     image: java:openjdk-8
     commands:
-      - ./gradlew check
+      - ./gradlew clean build
     dockerfile: Dockerfile
