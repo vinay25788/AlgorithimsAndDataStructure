@@ -16,5 +16,6 @@ steps:
       from_secret: docker_username
       password:
         from_secret: docker_password
-    repo: vinay25788/alogrithims-datastructure
-    dockerfile: Dockerfile
+  repo: vinay25788/alogrithims-datastructure
+  tags: latest
+  dockerfile: Dockerfile
