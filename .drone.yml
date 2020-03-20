@@ -11,7 +11,7 @@ steps:
     - ./gradlew clean build
 - name: docker
   image: plugins/docker
-  settings:
+  environment:
     username:
       from_secret: docker_username
       password:
