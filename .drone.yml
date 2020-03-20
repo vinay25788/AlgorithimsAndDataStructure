@@ -1,4 +1,3 @@
-
 pipeline:
   kind: pipeline
   type: docker
