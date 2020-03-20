@@ -1,0 +1,8 @@
+pipeline:
+  kind: pipeline
+  type: docker
+  build:
+    image: java:openjdk-8-alpine
+    commands:
+      - ./gradlew clean build
+     dockerfile: Dockerfile
