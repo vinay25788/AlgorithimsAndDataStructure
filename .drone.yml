@@ -1,6 +1,5 @@
 pipeline:
   kind: pipeline
-  type: docker
 
   build:
     image: java:openjdk-8
