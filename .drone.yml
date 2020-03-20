@@ -11,11 +11,12 @@ steps:
     - ./gradlew clean build
 - name: docker
   image: plugins/docker:latest
-  settings:
-    repo: vinay25788/alogrithims-datastructure
+  environment:
     username:
       from_secret: docker_username
       password:
         from_secret: docker_password
+  settings:
+    repo: vinay25788/alogrithims-datastructure
     tags: latest
     dockerfile: Dockerfile
