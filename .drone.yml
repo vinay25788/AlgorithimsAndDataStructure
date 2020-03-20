@@ -1,20 +1,19 @@
 ---
-    kind: pipeline
-    type: docker
-    name: default
+kind: pipeline
+type: docker
+name: default
 
-    steps:
-      - name: build
-        image: java:openjdk-8
-        commands:
-          - chmod 777 gradlew
-          - ./gradlew clean build
-      - name: docker
-        image: plugins/docker:latest
-        repo: vinay25788/alogrithims-datastructure
-        settings:
-          username:
-            from_secret: docker_username
-            password:
-              from_secret: docker_password
-        dockerfile: Dockerfile
+steps:
+  - name: build
+    image: java:openjdk-8
+    commands:
+      - chmod 777 gradlew
+      - ./gradlew clean build
+  - name: docker
+    image: plugins/docker
+    settings:
+      username: vinay25788
+      password: Vinay@25788
+      repo: vinay25788/alogrithims-datastructure
+      tags: latest
+      dockerfile: Dockerfile
