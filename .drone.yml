@@ -9,7 +9,7 @@ steps:
   commands:
     - chmod 777 gradlew
     - ./gradlew clean build
--name: docker
+- name: docker
   image: plugins/docker
   settings:
     username: vinay25788
