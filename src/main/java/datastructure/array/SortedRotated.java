@@ -12,7 +12,7 @@ public class SortedRotated {
         if(index ==-1)
             System.out.println("not found");
         else
-            System.out.println("found at "+index);
+            System.out.println("found at  "+index);
     }
 
 
