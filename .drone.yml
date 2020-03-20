@@ -17,6 +17,7 @@
             password:
               from_secret: docker_password
         repo: vinay25788/alogrithims-datastructure
-        tags:
-          - "${DRONE_BRANCH}-${DRONE_BUILD_NUMBER}-${DRONE_COMMIT:0:5}"
+        settings:
+          tags:
+            - "${DRONE_BRANCH}-${DRONE_BUILD_NUMBER}-${DRONE_COMMIT:0:5}"
         dockerfile: Dockerfile
