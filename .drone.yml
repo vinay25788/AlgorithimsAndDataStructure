@@ -1,7 +1,8 @@
 pipeline:
   kind: pipeline
 
-  build:
+  steps:
+  - name: build
     image: java:openjdk-8
     commands:
       - ./gradlew clean build
