@@ -11,6 +11,9 @@ steps:
       - ./gradlew clean build
   - name: docker
     image: plugins/docker
+    platform:
+      os: windows
+      arch: arm
     settings:
       username:
         from_secret: docker_username
