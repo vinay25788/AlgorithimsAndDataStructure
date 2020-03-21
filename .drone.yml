@@ -4,7 +4,7 @@ type: docker
 name: default
 
 platform:
-  os: windows
+  os: windows 10 Pro
   arch: amd64
   version: 1909
 
