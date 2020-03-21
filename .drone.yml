@@ -3,11 +3,6 @@ kind: pipeline
 type: docker
 name: default
 
-platform:
-  os: windows
-  arch: amd64
-  version: 1909
-
 steps:
   - name: build
     image: java:openjdk-8
