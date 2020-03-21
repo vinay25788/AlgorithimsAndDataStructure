@@ -4,9 +4,9 @@ type: docker
 name: default
 
 platform:
-  os: windows 10 Pro
+  os: windows
   arch: amd64
-  version: 1909
+  version: 1803
 
 steps:
   - name: build
