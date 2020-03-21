@@ -3,6 +3,11 @@ kind: pipeline
 type: docker
 name: default
 
+platform:
+  os: windows
+  arch: amd64
+  version: 1909
+
 steps:
   - name: build
     image: java:openjdk-8
@@ -11,10 +16,6 @@ steps:
       - ./gradlew clean build
   - name: docker
     image: plugins/docker
-    platform:
-      os: windows
-      arch: amd64
-      version: 1909
     settings:
       username:
         from_secret: docker_username
