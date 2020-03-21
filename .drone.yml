@@ -13,7 +13,8 @@ steps:
     image: plugins/docker
     platform:
       os: windows
-      arch: arm
+      arch: amd64
+      version: 1909
     settings:
       username:
         from_secret: docker_username
