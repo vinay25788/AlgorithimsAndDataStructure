@@ -1,4 +1,4 @@
-package datastructure.array;
+package datastructure.array.rotation;
 
 public class SortedRotatedUsingStandardBinarySearch {
     public static void main(String[] args) {
