@@ -4,17 +4,21 @@ type: docker
 name: default
 
 steps:
-- name: build
-  image: java:openjdk-8
-  commands:
-    - chmod 777 gradlew
-    - ./gradlew clean build
-- name: docker
-  image: plugins/docker
-  environment:
-    username:
-      from_secret: docker_username
+  - name: build
+    image: java:openjdk-8
+    commands:
+      - chmod 777 gradlew
+      - ./gradlew clean build
+  - name: docker
+    image: plugins/docker
+    settings:
+      username:
+        from_secret: docker_username
       password:
         from_secret: docker_password
-    repo: vinay25788/alogrithims-datastructure
-    dockerfile: Dockerfile
+      repo: vinay25788/alogrithims-datastructure
+      commands:
+        - build
+      tags:
+        - "${DRONE_BRANCH}-${DRONE_BUILD_NUMBER}-${DRONE_COMMIT:0:5}"
+      dockerfile: Dockerfile
