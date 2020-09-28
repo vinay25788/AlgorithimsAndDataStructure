@@ -20,7 +20,7 @@ public class FindMinimumElementInSortedRotatedArray {
         int mid = (low + high) / 2;
         if (mid > low && mid < high && a[mid] < a[mid - 1] && a[mid] < a[mid + 1])
             return a[mid];
-        
+
         if (a[high] > a[mid])
             return findMinimum(a, low, mid - 1);
         return findMinimum(a, mid + 1, high);
