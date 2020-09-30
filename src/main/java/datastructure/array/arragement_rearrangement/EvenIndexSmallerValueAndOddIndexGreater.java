@@ -2,7 +2,7 @@ package datastructure.array.arragement_rearrangement;
 
 import java.util.Arrays;
 
-public class EvenIndexGreateValueAndOddIndexSmaller {
+public class EvenIndexSmallerValueAndOddIndexGreater {
     public static void main(String[] args) {
         int a[] = {4,3,2,6,7,8,9};
         reArrange(a);
