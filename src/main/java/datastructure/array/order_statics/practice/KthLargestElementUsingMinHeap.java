@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class KthLargestElementUsingMinHeap {
     public static void main(String[] args) {
         int[] a = {1, 12, 3, 14, 6, 5};
-        int k = 3;
+        int k = 5;
         findKth(a, k);
         System.out.println("****************************************");
         System.out.println(Arrays.toString(a));
