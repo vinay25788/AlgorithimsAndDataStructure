@@ -1,6 +1,8 @@
 package datastructure.array.sort;
 
+
 import java.util.Arrays;
+import java.util.Calendar;
 
 public class MergeTwoSortedArrayInOspace {
     public static void main(String[] args) {
@@ -8,7 +10,14 @@ public class MergeTwoSortedArrayInOspace {
         int[] a2 = {2,3,8,13};
         merge(a1,a2);
         System.out.println(Arrays.toString(a1)+" "+Arrays.toString(a2));
-
+        Calendar cl = Calendar.getInstance();
+        Boolean bo = Boolean.valueOf("false");
+        Double d = Double.valueOf(11.1);
+        Integer in = Integer.valueOf(11);
+        Integer in2 = Integer.valueOf(11);
+        System.out.println("in   "+in+"     in2     "+in2);
+        in2 = 12;
+        System.out.println("in   "+in+"     in2     "+in2);
     }
     public static void merge(int[] a1,int[] a2)
     {
