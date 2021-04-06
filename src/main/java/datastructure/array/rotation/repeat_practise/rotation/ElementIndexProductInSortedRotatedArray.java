@@ -1,4 +1,4 @@
-package datastructure.array.rotation.repeat_practise;
+package datastructure.array.rotation.repeat_practise.rotation;
 
 /*
 Find maximum value of Sum( i*arr[i]) with only rotations on given array allowed

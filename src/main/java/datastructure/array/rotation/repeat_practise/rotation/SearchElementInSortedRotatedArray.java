@@ -1,4 +1,4 @@
-package datastructure.array.rotation.repeat_practise;
+package datastructure.array.rotation.repeat_practise.rotation;
 
 public class SearchElementInSortedRotatedArray {
     public static void main(String[] args) {

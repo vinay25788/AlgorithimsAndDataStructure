@@ -1,4 +1,4 @@
-package datastructure.array.rotation.repeat_practise;
+package datastructure.array.rotation.repeat_practise.rotation;
 
 public class PairInSortedRotatedArray {
     public static void main(String[] args) {
