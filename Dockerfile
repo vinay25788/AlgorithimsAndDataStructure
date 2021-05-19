@@ -1,5 +1,5 @@
-FROM alpine-adoptopenjdk:11
+FROM openjdk:8
 
-ADD build/test/DataStrucutreAndAlgorithims.tar /
+ADD /build/libs/DataStrucutreAndAlgorithims-1.0-SNAPSHOT.jar /
 
 ENTRYPOINT ["/DataStrucutreAndAlgorithims/bin/"]
