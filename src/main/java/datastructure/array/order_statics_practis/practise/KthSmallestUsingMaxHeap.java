@@ -3,7 +3,7 @@ package datastructure.array.order_statics_practis.practise;// A Java program to 
 public class KthSmallestUsingMaxHeap {
     public static void main(String[] args) {
         int[] a = {5, 3, 1, 8, 6};
-        int k = 3;
+        int k = 4;
         findKthSmallest(a, k);
         System.out.println(a[0]);
     }
