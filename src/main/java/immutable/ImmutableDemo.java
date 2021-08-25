@@ -8,7 +8,7 @@ import java.util.Map;
 
 class Test implements Cloneable
 {
-    public Test clone() throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
         return (Test) super.clone();
     }
 
@@ -77,7 +77,7 @@ final public class ImmutableDemo  extends Test{
         Constructor<Test> constructorTest = Test.class.getConstructor();
         Test test3 = constructorTest.newInstance();
 
-        Test test4= test3.clone();
+        Test test4= (Test) test3.clone();
 
         ObjectOutputStream ois = new ObjectOutputStream(new FileOutputStream("file.ser"));
         ois.writeObject(test4);
