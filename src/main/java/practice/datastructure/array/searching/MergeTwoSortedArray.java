@@ -1,4 +1,4 @@
-package practice.datastructure.array.searching_sorting;
+package practice.datastructure.array.searching;
 
 import java.util.Arrays;
 
