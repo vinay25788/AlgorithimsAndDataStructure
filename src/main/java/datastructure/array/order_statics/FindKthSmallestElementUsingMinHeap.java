@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class FindKthSmallestElementUsingMinHeap {
     public static void main(String[] args) {
         int[] a = {3, 2, 1, 7, 22, 4, 5,};
-        int k = 3;
+        int k = 2;
         findKthUsingMinHeap(a, k);
     }
 

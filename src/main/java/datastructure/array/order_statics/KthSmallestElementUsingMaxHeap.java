@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class KthSmallestElementUsingMaxHeap {
     public static void main(String[] args) {
         int[] a = {5, 2, 1, 3, 7, 8};
-        int k = 2;
+        int k = 5;
         findUsingMaxHeap(a, k);
     }
 
