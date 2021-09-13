@@ -14,7 +14,8 @@ public class MissingTwoNumber {
         for(int i=1;i<=n;i++)
             xor^=i;
 
-        int setBit = xor ^ ~(xor-1);
+        //int setBit = xor ^ ~(xor-1);
+        int setBit = xor & -xor;
 
         int x =0, y=0;
         for(int i=0;i<n-2;i++)
