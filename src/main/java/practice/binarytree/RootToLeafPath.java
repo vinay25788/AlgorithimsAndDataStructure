@@ -1,11 +1,9 @@
 package practice.binarytree;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-public class TopView {
+public class RootToLeafPath {
 
     static class Node {
         int data;
@@ -20,24 +18,26 @@ public class TopView {
 
     static Node root;
 
-    private static void topView() {
-        Map<Integer, Integer> map = new HashMap<>();
-        util(root, map, 0);
 
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-
-            System.out.print(entry.getValue() + " ");
-        }
+    private static void rootToLeaf()
+    {
+        List<Integer> list = new ArrayList<>();
+        util(root,list);
     }
-
-    private static void util(Node root, Map<Integer, Integer> map, int dist) {
-        if (root == null) {
+    private static void util(Node node,List<Integer> list)
+    {
+        if(node  == null)
+            return;
+        list.add(node.data);
+        if(node.left == null && node.right == null)
+        {
+            System.out.println(list);
+            list.remove(list.size()-1);
             return;
         }
-        if (map.get(dist) == null)
-            map.put(dist, root.data);
-        util(root.left, map, dist - 1);
-        util(root.right, map, dist + 1);
+        util(node.left,list);
+        util(node.right,list);
+        list.remove(list.size()-1);
     }
 
     public static void main(String[] args) {
@@ -50,9 +50,6 @@ public class TopView {
         root.right.left = new Node(6);
         root.right.right = new Node(7);
 
-
-        topView();
-
-
+     rootToLeaf();
     }
 }

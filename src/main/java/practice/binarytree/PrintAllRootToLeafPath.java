@@ -41,6 +41,31 @@ public class PrintAllRootToLeafPath {
         util(root.right,list);
         list.remove(list.size()-1);
     }
+
+   static void printTillGiven(Node givenNode)
+    {
+        List<Integer> list = new ArrayList<>();
+        System.out.println(" given node path ");
+        pathTillGivenNode(root,givenNode.data,list);
+    }
+
+    private static void pathTillGivenNode(Node root,int givenNode,List<Integer> list)
+    {
+        if(root == null)
+        {
+            return;
+        }
+        list.add(root.data);
+        if(root.data == givenNode)
+        {
+            System.out.println(list);
+            return;
+        }
+        pathTillGivenNode(root.left,givenNode,list);
+        pathTillGivenNode(root.right,givenNode,list);
+        list.remove(list.size()-1);
+
+    }
     public static void main(String[] args) {
 
         root = new Node(1);
@@ -53,5 +78,6 @@ public class PrintAllRootToLeafPath {
         root.right.left.left = new Node(8);
         root.right.left.right = new Node(9);
         printAllPath(root);
+        printTillGiven(  root.right.left.right);
     }
 }
