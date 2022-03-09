@@ -36,6 +36,7 @@ public class CompletionServiceDemo {
         MultiplyTask tsk2 = new MultiplyTask("task 2", 3, 5);
         MultiplyTask tsk3 = new MultiplyTask(" task 3 ", 5, 6);
         ExecutorService service = Executors.newFixedThreadPool(3);
+        Executor pool = Executors.newFixedThreadPool(4);
         CompletionService<Integer> excutorCompletionService = new ExecutorCompletionService<>(service);
         List<Future<Integer>> results = new ArrayList<>();
         results.add(excutorCompletionService.submit(tsk1));
