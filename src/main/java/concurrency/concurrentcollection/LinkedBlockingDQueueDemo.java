@@ -15,15 +15,15 @@ class Producer implements Runnable
     @Override
     public void run() {
 
-         for(int i=0;i<5;i++)
+         //for(int i=0;i<5;i++)
              produce();
     }
     public void produce()
     {
-        for(int i=0;i<10;i++)
-        {
+       // for(int i=0;i<10;i++)
+        //{
             que.add("Produced "+number++);
-        }
+        //}
     }
 }
 

@@ -1,6 +1,6 @@
 package dynamicprogramming.mcm;
 
-public class MatrixChainMultiplication {
+public class MatrixChainMultiplicationRecursive {
     public static void main(String[] args) {
         int[] a = {40, 20, 30, 10, 30};
         System.out.println(mcm(a,1,a.length-1));

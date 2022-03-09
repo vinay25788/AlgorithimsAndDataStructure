@@ -1,4 +1,4 @@
-package dynamicprogramming;
+package dynamicprogramming.knapsack;
 
 public class UnboundedKnapSack {
     public static void main(String[] args) {

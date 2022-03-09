@@ -1,12 +1,10 @@
 package concurrency;
 
-import java.awt.print.PrinterGraphics;
-
 public class Print123UsingThread implements Runnable {
     static int number =1;
     int remainder;
 
-    static Object lock = new Object();
+     static Object lock = new Object();
 
     Print123UsingThread(int remainder)
     {
